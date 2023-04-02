@@ -1,0 +1,131 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(5, 3, 32);
+ 
+}
+
+.logo a h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin: 0 auto;
+
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 100px;
+
+
+}
+
+.nav_menu li  {
+    align-items: center;
+    list-style: none;
+    padding: 0px 30px;
+    transition: 0.5s ease-in-out;
+  
+}
+.nav_menu li a{
+    color: white;
+}
+
+
+
+.login {
+   margin-left: 100px;
+}
+
+.toggle div {
+    width: 35px;
+    height: 4px;
+    margin: 6px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+
+@media screen and (max-width:922px) {
+
+    .nav_menu li  {
+        padding: 0px 20px;
+       
+    }
+    .nav_menu li a{
+        font-size: 1.2rem;
+    }
+    .login{
+        margin-left: 20px;
+    }
+
+    .logo a h1 {
+        padding-left: 20px;
+        font-size: 25px;
+    }
+    .nav_menu {
+        
+        padding-left: 0px;
+    
+    
+    }
+
+}
+
+@media screen and (max-width:690px) {
+    .toggle {
+        display: block;
+        padding-left: 28px;
+        cursor: pointer;
+    }
+
+    .nav_menu {
+        background-color: rgb(5, 3, 32);
+        position: fixed;
+        right: 0;
+        top: 8vh;
+        height: 93vh;
+        width: 45%;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: 0.4s ease-in-out;
+        transform: translateX(100%);
+        text-align: center;
+        z-index: 9999999999999999;
+    }
+
+    .nav_menu li {
+        padding: 25px;
+    }
+    .login{
+        margin-left: 0px;
+    }
+
+    .nav_phone {
+        transform: translateX(0%);
+    }
+
+    .toggle1 .line-1 {
+        transform: rotate(-45deg) translate(-7px, 3px);
+    }
+
+    .toggle1 .line-2 {
+        opacity: 0;
+    }
+
+    .toggle1 .line-3 {
+        transform: rotate(45deg) translate(-10px, -7px);
+    }
+
+}

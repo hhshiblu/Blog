@@ -1,0 +1,4 @@
+export const AUTH_SUCCESS="AUTH_SUCCESS";
+export const AUTH_FAILED="AUTH_FAILED";
+export const AUTH_SIGNUP="AUTH_SIGNUP"
+export const AUTH_SIUP_FAILED="AUTH_SIUP_FAILED"
