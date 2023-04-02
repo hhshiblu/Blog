@@ -2,7 +2,9 @@ import axios from 'axios'
 import * as ActionType from './ActionType'
 axios.defaults.withCredentials = true
 axios.defaults.baseURL =
-  location.protocol === 'http:' ? 'http://localhost:5000/api/v1' : 'server:url'
+  window.location.protocol === 'http:'
+    ? 'http://localhost:5000/api/v1'
+    : 'server:url'
 
 export const authSuccess = (user) => {
   return {
@@ -86,6 +88,13 @@ export const signinData = (email, password) => async (dispatch) => {
     const response = await axios.post(LOGIN_URL, auth)
     if (response.status === 200) {
       dispatch(authSuccess(response.data.user))
+      localStorage.setItem(
+        'hasToken',
+        JSON.stringify({
+          ok: true,
+          maxAge: Date.now() + 1000 * 600,
+        })
+      )
     }
   } catch (error) {
     if (error.response) {
